@@ -1,7 +1,7 @@
 # Part of Dream Auto Daily
 Part of Dream - DreamerQuest auto daily check-in and spin
 ## Tools and components required
-1. [Part of Dream](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8) Account, Register here: [https://dreamerquests.partofdream.io](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8)
+1. [Part of Dream](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8) Account, Register here: [https://dreamerquests.partofdream.io](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8) (Login use Twitter)
 2. Don't forget to connect socials and complete tasks!
 3. Account UserID and Cookies
 4. Python3 Latest
