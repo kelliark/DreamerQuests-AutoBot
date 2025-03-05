@@ -2,7 +2,7 @@
 Part of Dream - DreamerQuest auto daily check-in and spin
 ## Tools and components required
 1. [Part of Dream](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8) Account, Register here: [https://dreamerquests.partofdream.io](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8)
-2. Account ID and Cookies
+2. Account UserID and Cookies
 3. Python3 Latest
 4. VPS or RDP (OPTIONAL), Get free $200 credit [DigitalOcean](https://m.do.co/c/3f132e0f7e13) for 60 days here: [Register](https://m.do.co/c/3f132e0f7e13)
 ## Installation
@@ -24,9 +24,9 @@ git clone https://github.com/im-hanzou/partofdream-autodaily
 - Open your Browser console `CTRL + SHIFT  + I` or `F12`
 - Go to `Network` tab and refresh
 - Search for `https://server.partofdream.io/user/session`
-- Find your user id, select one and go to `response`. Copy your user id
+- Find your user id, select one and go to `Response`. Copy your `user id`
 ![image](https://github.com/user-attachments/assets/09ab31fd-a7cb-421f-96a4-935c9c2a0293)
-- Find your cookie, select one and copy cookie from `Request Headers`
+- Find your cookie, select one and copy `cookies` from `Request Headers`
 ![image](https://github.com/user-attachments/assets/a5bec071-dc60-43e6-bcc7-30f7a53013c7)
 ### Requirements installation
 - Make sure you already in bot folder:
@@ -50,7 +50,7 @@ python main.py
 ```bash
 python3 main.py
 ```
-- Then insert your `user id` and `cookie`
+- Then insert your `user id` and `cookies`
 # Notes
 - Run this bot, use my referral code if you don't have one.
 - You can just run this bot at your own risk, I'm not responsible for any loss or damage caused by this bot.
