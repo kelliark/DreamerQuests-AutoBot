@@ -32,17 +32,28 @@ A Python automation script to perform daily check-in and spin tasks on **Dreamer
    ```bash
    pip install -r requirements.txt
    ```
-2. **Configure Accounts:**
+3. **Configure Accounts:**
    Open `accounts.txt` file in the project directory. Each line should follow this format:
    ```
    userid:cookie
    ```
-3. **Configure Proxies (Optional):**
+4. **Configure Proxies (Optional):**
    Open `proxies.txt` file in the project directory. Each line should be a proxy in the following format:
    ```
    protocol://username:password@ip:port
    ```
    *Note:* If you do not supply a `proxies.txt` file or if it's empty, the script will run without any proxies.
+
+### How to get account id and cookies
+- First, login into your [Part of Dream](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8) Account
+- Open your Browser console `CTRL + SHIFT  + I` or `F12`
+- Go to `Network` tab and refresh
+- Search for `https://server.partofdream.io/user/session`
+- Find your user id, select one and go to `Response`. Copy your `user id`
+![image](https://github.com/user-attachments/assets/09ab31fd-a7cb-421f-96a4-935c9c2a0293)
+- Find your cookie, select one and copy `cookies` from `Request Headers`
+![image](https://github.com/user-attachments/assets/a5bec071-dc60-43e6-bcc7-30f7a53013c7)
+- The owner of the photo is the one I forked with, thank you.
 
 ## Usage
 
