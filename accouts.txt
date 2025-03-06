@@ -1,0 +1,1 @@
+// accounts format must be USERID:COOKIE , one per line ,, you can delete this line
