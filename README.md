@@ -1,58 +1,76 @@
-# Part of Dream Auto Daily
-Part of Dream - DreamerQuest auto daily check-in and spin
-## Tools and components required
-1. [Part of Dream](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8) Account, Register here: [https://dreamerquests.partofdream.io](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8) (Login use Twitter)
-2. Don't forget to connect socials and complete tasks!
-3. Account UserID and Cookies
-4. Python3 Latest
-5. VPS or RDP (OPTIONAL), Get free $200 credit [DigitalOcean](https://m.do.co/c/3f132e0f7e13) for 60 days here: [Register](https://m.do.co/c/3f132e0f7e13)
-## Installation
-- Install Python For Windows: [Python](https://www.python.org/ftp/python/3.13.0/python-3.13.0-amd64.exe)
-- For Unix:
-```bash
-apt install python3 python3-pip git -y
-```
-- For Termux:
-```bash
-pkg install python python-pip git -y
-```
-- Download script [Manually](https://github.com/im-hanzou/partofdream-autodaily/archive/refs/heads/main.zip) or use git:
-```bash
-git clone https://github.com/im-hanzou/partofdream-autodaily
-```
-### How to get account id and cookies
-- First, login into your [Part of Dream](https://dreamerquests.partofdream.io/login?referralCodeForPOD=2e6835e8) Account
-- Open your Browser console `CTRL + SHIFT  + I` or `F12`
-- Go to `Network` tab and refresh
-- Search for `https://server.partofdream.io/user/session`
-- Find your user id, select one and go to `Response`. Copy your `user id`
-![image](https://github.com/user-attachments/assets/09ab31fd-a7cb-421f-96a4-935c9c2a0293)
-- Find your cookie, select one and copy `cookies` from `Request Headers`
-![image](https://github.com/user-attachments/assets/a5bec071-dc60-43e6-bcc7-30f7a53013c7)
-### Requirements installation
-- Make sure you already in bot folder:
-```bash
-cd partofdream-autodaily
-```
-#### Windows and Termux:
-```bash
-pip install -r requirements.txt
-```
-#### Unix:
-```bash
-pip3 install -r requirements.txt
-```
-## Run the Bot
-- Windows and Termux:
+# Partofdream AutoDaily
+
+A Python automation script to perform daily check-in and spin tasks on **Dreamer Quests** for multiple accounts. The script supports assigning individual proxies per account and automatically retries tasks (with proxy switching) if an error occurs.
+
+## Register
+ - [Dreamer Quests](https://dreamerquests.partofdream.io/login?referralCodeForPOD=65da3b06)
+ - Use my code: 65da3b06
+
+## Features
+
+- **Multi-Account Support:** Use a single script to automate tasks for multiple accounts.
+- **Proxy Support:** Assign a unique proxy per account via a `proxies.txt` file.
+- **Automatic Retrying:** If a task fails, the script retries up to three times and switches proxies if available.
+- **Status Reporting:** Displays account details (display name, points, IP used) and task outcomes with friendly messages.
+- **Scheduled Execution:** Repeats the entire process every hour until stopped.
+
+## Prerequisites
+- **Python Latest**  
+- Required Python packages:
+  - `requests`
+  - `colorama`
+  - `schedule`
+
+## Setup
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/kelliark/DreamerQuests-AutoBot
+   cd DreamerQuests-AutoBot
+   ```
+2. **Install requirements:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Configure Accounts:**
+   Open `accounts.txt` file in the project directory. Each line should follow this format:
+   ```
+   userid:cookie
+   ```
+3. **Configure Proxies (Optional):**
+   Open `proxies.txt` file in the project directory. Each line should be a proxy in the following format:
+   ```
+   protocol://username:password@ip:port
+   ```
+   *Note:* If you do not supply a `proxies.txt` file or if it's empty, the script will run without any proxies.
+
+## Usage
+
+Run the script with:
+
 ```bash
 python main.py
 ```
-- Unix:
-```bash
-python3 main.py
-```
-- Then insert your `user id` and `cookies`
-# Notes
-- Run this bot, use my referral code if you don't have one.
-- You can just run this bot at your own risk, I'm not responsible for any loss or damage caused by this bot.
-- This bot is for educational purposes only.
+
+The script will:
+- Display a banner and account status (display name, points, and current IP used).
+- Perform daily check-in and spin tasks for each account.
+- Print friendly messages indicating whether the tasks were successful or already completed, along with a countdown for the next attempt.
+- Retry tasks up to three times in case of errors (switching proxies if available).
+- Wait one hour before repeating the process.
+
+## Troubleshooting
+- **Proxy Errors:**  
+  If a proxy error occurs, the script will automatically switch to a different proxy from your `proxies.txt` file (if available) and retry the task.
+- **Task Failures:**  
+  If tasks continue to fail, ensure that your account cookies are up-to-date and that your proxies (if used) are working properly.
+
+## Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request with improvements or bug fixes.
+
+## License
+This project is licensed under the MIT License. 
+
+
+## Notes
+Use at your own risk, all risk are borne with the user.
